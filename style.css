@@ -27,10 +27,10 @@ body {
   background-color: var(--son-color-white);
 }
 
-h1, h2 {
+h1, h1 > *, h2 {
   font-size: var(--son-font-xl);
-  font-family: "Josefin Sans", serif;
-  font-style: normal;
+  font-family: "Josefin Sans", Impact, 'Arial Narrow Bold', sans-serif;
+  font-style: bold;
 }
 
 :root {
@@ -41,8 +41,10 @@ h1, h2 {
   --son-color-icons: #7EDDD2;
   --son-color-font: #000000;
   --son-color-font-special: #4f5658;
+  --son-color-hero: #F4F6F5;
 
   /* FONT SIZES */
+  --son-font-xxxl: 50px;
   --son-font-xl: 36px;
   --son-font-l: 20px;
   --son-font-m: 16px;
@@ -62,6 +64,8 @@ h1, h2 {
   --son-padding-m: 20px;
   --son-padding-l: 30px;
   --son-padding-xl: 40px;
+  --son-padding-xxl: 60px;
+  --son-padding-xxxl: 80px;
 
   /* MARGIN */
   --son-margin-xs: 5px;
@@ -71,10 +75,10 @@ h1, h2 {
   --son-margin-xl: 40px;
 
   /* GAP */
-  --son-gap-s: 5px;
-  --son-gap-m: 10px;
-  --son-gap-l: 15px;
-  --son-gap-xl: 25px;
+  --son-gap-s: 10px;
+  --son-gap-m: 15px;
+  --son-gap-l: 20px;
+  --son-gap-xl: 30px;
 }
 
 /*! @media (max-width: 750px) { */
@@ -102,4 +106,70 @@ h1, h2 {
   .container {
     padding: 0 5px;
   }
+}
+
+#header {
+  height: 80px;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  padding:var(--son-padding-s) var(--son-padding-m);
+}
+
+#header > ul {
+  display: flex;
+  gap: var(--son-gap-xl);
+  align-items: center;
+  flex-direction: row;
+}
+
+#header > ul > li:last-child{
+  background-color: var(--son-color-bg1);
+  padding: var(--son-padding-s);
+  border-radius: var(--son-radius-secundary);
+}
+
+#header > ul > li > a {
+  font-weight: 500;
+}
+
+#header > ul > li:last-child > a {
+  color: var(--son-color-white);
+}
+
+#hero {
+  height: 550px;
+  display: flex;
+  align-items: center;
+  background-color: var(--son-color-hero);
+  border-radius: var(--son-radius-primary);
+}
+
+#hero div {
+  width: 50%;
+  height: 100%;
+}
+
+#hero > .info > h1 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--son-gap-s);
+  text-align: start;
+  padding-left: var(--son-padding-xxxl);
+}
+
+#hero > .info > h1 > span {
+  font-size: var(--son-font-xxxl);
+  font-weight: 700;
+}
+
+#hero .wrapper img {
+  width: 100%;
+  height: 100%;
 }
